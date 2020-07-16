@@ -9,7 +9,6 @@ const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const image = require("./controllers/image");
 
-
 const db = knex({
   client: "pg",
   connection: {
@@ -78,6 +77,6 @@ app.post("/imageURL", (req, res) => {
   image.handleAPI(req, res);
 });
 
-app.listen(3000, () => {
-  console.log("all good on port 3000");
+app.listen(process.env.PORT || 3000, () => {
+  console.log("all good on port ${process.env.port}");
 });
