@@ -1,3 +1,3 @@
 # FaceDetectAPI
 
-# Learning React
+## Learning React
